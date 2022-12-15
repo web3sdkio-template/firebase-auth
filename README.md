@@ -6,7 +6,7 @@ This template shows you can use web3sdkio Auth as a custom authentication provid
   <div className="col col--12">
     <QuickstartCard
       name="Example Repo: Firebase Integration"
-      link="https://github.com/web3sdkio-example/firebase-auth"
+      link="https://github.com/web3sdkio-template/firebase-auth"
       description="Implement web3sdkio Auth with Firebase"
       image="/assets/languages/firebase.png"
     />
@@ -54,8 +54,8 @@ FIREBASE_CLIENT_EMAIL=<service-account-client-email>
 
 Create a new directory called `lib` and create two helper scripts to initialize Firebase in the browser and server:
 
-- [lib/initFirebase.ts](https://github.com/web3sdkio-example/firebase-auth/blob/main/lib/initFirebase.ts)
-- [lib/initFirebaseAdmin.ts](https://github.com/web3sdkio-example/firebase-auth/blob/main/lib/initFirebaseAdmin.ts)
+- [lib/initFirebase.ts](https://github.com/web3sdkio-template/firebase-auth/blob/main/lib/initFirebase.ts)
+- [lib/initFirebaseAdmin.ts](https://github.com/web3sdkio-template/firebase-auth/blob/main/lib/initFirebaseAdmin.ts)
 
 Now we have an easy way to access Firebase Auth and Firestore in both client and server environments!
 
@@ -63,7 +63,7 @@ Now we have an easy way to access Firebase Auth and Firestore in both client and
 
 We use our wallet's private key to instantiate the SDK on the server-side.
 
-We recommend using a [Secret Manager to secure your private key](https://portal.web3sdk.io/sdk/set-up-the-sdk/securing-your-private-key).
+We recommend using a [Secret Manager to secure your private key](https://docs.web3sdk.io/sdk/set-up-the-sdk/securing-your-private-key).
 
 **WARNING**: In this guide, we'll use environment variables for simplicity; but this is a security vulnerability and not recommended best practice for production environments.
 
@@ -210,7 +210,7 @@ export default async function login(req: NextApiRequest, res: NextApiResponse) {
   const sdk = Web3sdkioSDK.fromPrivateKey(
     // Using environment variables to secure your private key is a security vulnerability.
     // Learn how to store your private key securely:
-    // https://portal.web3sdk.io/sdk/set-up-the-sdk/securing-your-private-key
+    // https://docs.web3sdk.io/sdk/set-up-the-sdk/securing-your-private-key
     process.env.ADMIN_PRIVATE_KEY!,
     "mumbai" // configure this to your network
   );
@@ -266,6 +266,6 @@ You can now use all the functionality of Firebase Authentication and Firestore t
 
 ## What's Next?
 
-- [Get the current Firebase user](https://github.com/web3sdkio-example/firebase-auth/blob/main/lib/useFirebaseUser.ts)
-- [Read the current user's document from Firestore](https://github.com/web3sdkio-example/firebase-auth/blob/main/lib/useFirebaseUserDocument.ts)
-- [Sign out](https://github.com/web3sdkio-example/firebase-auth/blob/main/pages/index.tsx#L84-L89)
+- [Get the current Firebase user](https://github.com/web3sdkio-template/firebase-auth/blob/main/lib/useFirebaseUser.ts)
+- [Read the current user's document from Firestore](https://github.com/web3sdkio-template/firebase-auth/blob/main/lib/useFirebaseUserDocument.ts)
+- [Sign out](https://github.com/web3sdkio-template/firebase-auth/blob/main/pages/index.tsx#L84-L89)

@@ -11,7 +11,7 @@ export default async function login(req: NextApiRequest, res: NextApiResponse) {
   const sdk = Web3sdkioSDK.fromPrivateKey(
     // Using environment variables to secure your private key is a security vulnerability.
     // Learn how to store your private key securely:
-    // https://portal.web3sdk.io/sdk/set-up-the-sdk/securing-your-private-key
+    // https://docs.web3sdk.io/sdk/set-up-the-sdk/securing-your-private-key
     process.env.ADMIN_PRIVATE_KEY!,
     "mumbai" // configure this to your network
   );

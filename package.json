@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "@web3sdkio/auth": "^1.0.8",
-    "@web3sdkio/react": "^3",
-    "@web3sdkio/sdk": "^3",
+    "@web3sdkio/react": "^2.0.1",
+    "@web3sdkio/sdk": "^1.0.12",
     "ethers": "^5.6.8",
     "firebase": "^9.9.4",
     "firebase-admin": "^11.0.1",
